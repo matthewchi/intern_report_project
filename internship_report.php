@@ -68,13 +68,13 @@
                     Supervisor
 
                     <label>Name of Supervisor<br>
-                        <input class="internship_report" type="text" name="supervisorname"><br></label>
+                        <input class="internship_report" type="text" name="supervisor_name"><br></label>
 
                     <label>Supervisor email<br>
-                        <input class="internship_report" type="email" name="supervisoremail"><br></label>
+                        <input class="internship_report" type="email" name="supervisor_email"><br></label>
 
                     <label>Supervisor phone<br>
-                        <input class="internship_report" type="text" name="supervisor phone"><br></label>
+                        <input class="internship_report" type="text" name="supervisor_phone"><br></label>
 
                     <button type="button" id="next" style="float:right;">Next</button>
 
@@ -101,48 +101,48 @@
                     <br/>
                     <br/>
                     <label>Activity 1<br>
-                        <input type="text" name="supervisor phone" style="margin-top:4px;"><br></label>
+                        <input type="text" name="activity_2" style="margin-top:4px;"><br></label>
                     <br>
                     Activity 2<br>
-                    <label><input type="text" name="supervisor phone" style="margin-top:4px;"><br></label>
+                    <label><input type="text" name="activity_2" style="margin-top:4px;"><br></label>
                     <br>
                     <label>Activity 3<br>
-                        <input type="text" name="supervisor phone" style="margin-top:4px;"><br></label>
+                        <input type="text" name="activity_3" style="margin-top:4px;"><br></label>
                     <br>
                     <label>Activity 4<br>
-                        <input type="text" name="supervisor phone" style="margin-top:4px;"><br></label>
+                        <input type="text" name="activity_4" style="margin-top:4px;"><br></label>
                     <br>
                     <label>Activity 5<br>
-                        <input class="internship_report" type="text" name="supervisor phone"><br></label>
+                        <input class="internship_report" type="text" name="activity_5"><br></label>
 
                     <label>Did your supervisor give you relevant work to accomplish - specify!<br>
-                        <input class="internship_report" type="text" name="supervisor phone"><br></label>
+                        <input class="internship_report" type="text" name="relevant_work"><br></label>
 
                     <label>Difficulties or problem areas encountered during internship<br>
-                        <input class="internship_report" type="text" name="supervisor phone"><br></label>
+                        <input class="internship_report" type="text" name="difficulties"><br></label>
 
                     <label>Explain how work experience related to your major<br>
-                        <input class="internship_report" type="text" name="supervisor phone"><br></label>
+                        <input class="internship_report" type="text" name="experience_relation"><br></label>
 
                     <label>Is there anything you wanted to learn during your internship that you were not able to?<br>
-                        <input class="internship_report" type="text" name="supervisor phone"><br></label>
+                        <input class="internship_report" type="text" name="learn"><br></label>
 
                     <label>Has this work experience changed your mind about which sector of CGT you might be most
                         interested in
                         pursuing?<br>
-                        <input class="internship_report" type="text" name="supervisor phone"><br></label>
+                        <input class="internship_report" type="text" name="cgt_sector_change"><br></label>
 
                     <label>Internship provided me with contacts which may lead to future employment<br>
-                        <input type="radio" name="paid" value="yes" style="margin-top:4px;"> Yes<br>
-                        <input class="internship_report" type="radio" name="paid" value="no"> No<br></label>
+                        <input type="radio" name="future_employment" value="yes" style="margin-top:4px;"> Yes<br>
+                        <input class="internship_report" type="radio" name="future_employment" value="no"> No<br></label>
 
                     Considering your overall experience - how would you rate this internship?<br>
-                    <label><input type="radio" name="paid" value="yes" style="margin-top:4px;"> Very
+                    <label><input type="radio" name="rate_experience" value="yes" style="margin-top:4px;"> Very
                         Dissatisfied<br></label>
-                    <label><input type="radio" name="paid" value="no"> Dissatisfied<br></label>
-                    <label><input type="radio" name="paid" value="yes"> Neutral<br></label>
-                    <label><input type="radio" name="paid" value="no"> Satisfied<br></label>
-                    <label><input class="internship_report" type="radio" name="paid" value="yes"> Very
+                    <label><input type="radio" name="rate_experience" value="1"> Dissatisfied<br></label>
+                    <label><input type="radio" name="rate_experience" value="2"> Neutral<br></label>
+                    <label><input type="radio" name="rate_experience" value="3"> Satisfied<br></label>
+                    <label><input class="internship_report" type="radio" name="rate_experience" value="4"> Very
                         Satisfied<br></label>
                     <h3>Salary/Hourly Rate</h3>
 

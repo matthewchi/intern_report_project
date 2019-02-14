@@ -13,6 +13,8 @@ if (empty($_SESSION["username"])) {
 <head>
 <title>Home</title>
 
+<link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>

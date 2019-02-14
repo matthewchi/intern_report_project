@@ -64,16 +64,16 @@ include( "includes/server.php" );
                     Performs in a dependable manner
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super1" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super1" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super1" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super1" value="na">
                   </td>
                 </tr>
 
@@ -82,16 +82,16 @@ include( "includes/server.php" );
                     Cooperates with co-workers and supervisors
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super2" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super2" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super2" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super2" value="na">
                   </td>
                 </tr>
 
@@ -100,16 +100,16 @@ include( "includes/server.php" );
                     Shows interest in work
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super3" value="2">
                   </td>
                   <td>
-                      <input type="radio" name="cgtindustry2" value="1">
+                      <input type="radio" name="super3" value="1">
                   </td>
                   <td>
-                      <input type="radio" name="cgtindustry2" value="0">
+                      <input type="radio" name="super3" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super3" value="na">
                   </td>
                 </tr>
 
@@ -118,16 +118,16 @@ include( "includes/server.php" );
                     Learns quickly
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super4" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super4" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super4" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super4" value="na">
                   </td>
                 </tr>
 
@@ -136,16 +136,16 @@ include( "includes/server.php" );
                     Shows initiative
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super5" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super5" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super5" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super5" value="na">
                   </td>
                 </tr>
 
@@ -154,16 +154,16 @@ include( "includes/server.php" );
                     Produces high quality work
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super6" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super6" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super6" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super6" value="na">
                   </td>
                 </tr>
 
@@ -172,16 +172,16 @@ include( "includes/server.php" );
                     Accepts responsibility
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super7" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super7" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super7" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super7" value="na">
                   </td>
                 </tr>
 
@@ -190,16 +190,16 @@ include( "includes/server.php" );
                     Accepts criticism
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super8" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super8" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super8" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super8" value="na">
                   </td>
                 </tr>
 
@@ -208,16 +208,16 @@ include( "includes/server.php" );
                     Demonstrates organizational skills
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super9" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super9" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super9" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super9" value="na">
                   </td>
                 </tr>
 
@@ -226,16 +226,16 @@ include( "includes/server.php" );
                     Demonstrates technical knowledge and expertise
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super10" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super10" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super10" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super10" value="na">
                   </td>
                 </tr>
 
@@ -244,16 +244,16 @@ include( "includes/server.php" );
                     Demonstrates technical knowledge and expertise
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super11" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super11" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super11" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super11" value="na">
                   </td>
                 </tr>
 
@@ -262,16 +262,16 @@ include( "includes/server.php" );
                     Shows good judgement
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super12" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super12" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super12" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super12" value="na">
                   </td>
                 </tr>
 
@@ -280,16 +280,16 @@ include( "includes/server.php" );
                     Demonstrates creativity/orgininality
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super13" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super13" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super13" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super13" value="na">
                   </td>
                 </tr>
 
@@ -298,16 +298,16 @@ include( "includes/server.php" );
                     Analyzes problems effectively
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super14" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super14" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super14" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super14" value="na">
                   </td>
                 </tr>
 
@@ -316,16 +316,16 @@ include( "includes/server.php" );
                     Is self-reliant
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super15" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super15" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super15" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super15" value="na">
                   </td>
                 </tr>
 
@@ -334,16 +334,16 @@ include( "includes/server.php" );
                     Communicates well
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super16" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super16" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super16" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super16" value="na">
                   </td>
                 </tr>
 
@@ -352,16 +352,16 @@ include( "includes/server.php" );
                     Writes effectively
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super17" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super17" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super17" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super17" value="na">
                   </td>
                 </tr>
 
@@ -370,16 +370,16 @@ include( "includes/server.php" );
                     Has a professional attitude
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super18" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super18" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super18" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super18" value="na">
                   </td>
                 </tr>
 
@@ -388,16 +388,16 @@ include( "includes/server.php" );
                     Gives a professional appearance
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super19" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super19" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super19" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super19" value="na">
                   </td>
                 </tr>
 
@@ -406,16 +406,16 @@ include( "includes/server.php" );
                     Is punctual
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super20" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super20" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super20" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super20" value="na">
                   </td>
                 </tr>
 
@@ -424,16 +424,16 @@ include( "includes/server.php" );
                     Uses time effectively
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry1" value="2">
+                    <input type="radio" name="super30" value="2">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="1">
+                    <input type="radio" name="super30" value="1">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry2" value="0">
+                    <input type="radio" name="super30" value="0">
                   </td>
                   <td>
-                    <input type="radio" name="cgtindustry8" value="na">
+                    <input type="radio" name="super30" value="na">
                   </td>
                 </tr>
 
