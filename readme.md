@@ -12,3 +12,4 @@
 - CSS for certain pages
 - accessibility options?
 - responsive design
+- search filters
