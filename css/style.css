@@ -241,6 +241,10 @@ li a.top-nav {
   text-decoration: none;
 }
 
+a.top-nav:hover {
+	background-color: black;
+}
+
 ul.side-nav {
   list-style-type: none;
   margin: 0;
@@ -337,4 +341,9 @@ div.internship-report {
 
 h2, h3 {
 	font-weight: bold;
+}
+
+.login-container {
+	float: right;
+	margin-top: 40px;
 }
