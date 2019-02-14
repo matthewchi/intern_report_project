@@ -1,0 +1,318 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+td.behaviors {
+	text-align: left;
+}
+
+th, td {
+	max-width: 90px;
+	min-width: 38px;
+}
+
+table, th, td {
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+	padding: 5px;
+	text-align: center;
+}
+
+fieldset {
+	padding: 10px;
+}
+
+#form1 {
+	margin: 10px;
+}
+
+#form2 {
+	margin: 10px;
+}
+
+input.internship_report {
+	margin-top:4px;
+	margin-bottom: 20px;
+}
+
+.active {
+  background-color: white;
+}
+
+.options i {
+	font-size: 1.2em;
+	color: white;
+	padding-top: 12px;
+	margin-right: 4px;
+}
+
+.brand i {
+	font-size: 2.2em;
+	color: white;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+
+.search i {
+	font-size: 1.2em;
+	color: white;
+}
+
+.search {
+	padding-top: 7px;
+}
+
+input.top-nav {
+	margin-right: 5px;
+	font-size: 1.4em;
+}
+
+body {
+	font-family: 'Archivo';
+}
+
+.front-nav {
+	background-color: #C28E0E;
+	height: 45px;
+}
+
+div.landing-page {
+	background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('../images/_MG_9777.jpg');
+	background-size: cover;
+	background-color: black;
+	width: 100%;
+	height: 680px;
+}
+
+div.industry-content {
+	background-color: #efefef;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	color: #727272;
+	float: left;
+	width: 580px;
+	height: 560px;
+	margin-top: 40px;
+	padding-left: 40px;
+	padding-top: 60px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+h2.industry-content {
+	color: #424242;
+	margin-bottom: 46px;
+	font-size: 32px;
+}
+
+p.industry-content {
+	margin-bottom: 46px;
+	font-size: 18px;
+}
+
+div.home-info {
+	margin-top: -32px;
+	margin-left: 80px;
+}
+
+i.industry-content {
+	font-size: 48px;
+	opacity: 0.25;
+}
+
+div.home-icon {
+	width: 60px;
+	display: inline-block;
+	text-align: center;
+	margin-right: 20px;
+}
+
+div.cas-login {
+	background-color: #efefef;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	float: right;
+	width: 440px;
+	height: 560px;
+	margin-top: 40px;
+	border-left: 12px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+div.industry-signup {
+	background-color: #efefef;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	float: right;
+	width: 440px;
+	height: 560px;
+	margin-top: 40px;
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+	border-left: 12px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+h2.industry-signup {
+	text-align: center;
+	color: #424242;
+	margin-bottom: 20px;
+	font-size: 22px;
+}
+
+button.industry-signup {
+	background-color: #6E99B4;
+	color: white;
+	font-size: 18px;
+	text-shadow: 1px 1px 24px #727272;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border: none;
+	border-radius: 4px;
+	margin-top: 4px;
+	height: 50px;
+	width: 360px;
+}
+
+button.industry-signup:hover {
+	opacity: 0.8;
+}
+
+input.industry-signup {
+	margin-top:4px;
+	margin-bottom: 20px;
+	width: 360px;
+	height: 32px;
+}
+
+#career-login {
+	align-items: center;
+  justify-content: center;
+	display: flex;
+}
+
+button#career-account {
+	background-color: #C28E0E;
+	color: white;
+	font-size: 18px;
+	text-shadow: 1px 1px 24px #727272;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border: none;
+	border-radius: 4px;
+	height: 100px;
+	width: 240px;
+}
+
+button#career-account:hover {
+	opacity: 0.8;
+}
+
+button#industry-account {
+	background-color: #29A592;
+	color: white;
+	font-size: 18px;
+	text-shadow: 1px 1px 24px #727272;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border: none;
+	border-radius: 4px;
+	height: 50px;
+	width: 180px;
+}
+
+button#industry-account:hover {
+	opacity: 0.8;
+}
+
+ul.top-nav {
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #C28E0E;
+  position: fixed;
+  top: 0;
+	width: 100%;
+	text-align: center;
+}
+
+li.top-nav {
+  float: left;
+}
+
+li a.top-nav {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.side-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+li a.side-nav {
+  display: block;
+  text-decoration: none;
+	color: black;
+	margin-top: 10px;
+}
+
+div.side-icon {
+	width: 20px;
+	display: inline-block;
+	text-align: center;
+	margin-right: 5px;
+	color: #5B6870;
+}
+
+.container {
+	max-width: 1020px;
+	margin: auto;
+}
+
+div.top-nav {
+	height: 46px;
+}
+
+div.side-nav {
+	width: 200px;
+	height: 600px;
+	position: fixed;
+	display: inline-block;
+	float: left;
+	padding: 5px;
+}
+
+div.main-content {
+	background-color: white;
+	width: 510px;
+	height: 600px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-right: -4px;
+	margin-left: 200px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+div.right-content {
+	width: 310px;
+	height: 600px;
+	display: inline-block;
+	float: right;
+	padding-top: 10px;
+	padding-left: 5px;
+}
+
+div.internship {
+	background-color: white;
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 5px;
+}

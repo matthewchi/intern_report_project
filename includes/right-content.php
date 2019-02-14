@@ -1,0 +1,1 @@
+<a class="twitter-timeline" data-width="300" data-theme="light" data-link-color="#98700D" href="https://twitter.com/TechPurdue?ref_src=twsrc%5Etfw">Tweets by TechPurdue</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
