@@ -38,7 +38,9 @@ include( "includes/server.php" );
           <div id="intern-eval">
 
             <fieldset>
-              <legend>NAME OF INTERN</legend>
+              <legend>
+                Name of Intern
+              </legend>
 
               <table style="width:100%;">
                 <tr>

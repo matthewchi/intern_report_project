@@ -3,8 +3,11 @@ session_start();
 
 $errors = array();
 
+//connect to localhost
+//$db = mysqli_connect( "localhost", "root", "root", "internships" );
+
 //connect to db
-$db = mysqli_connect( "localhost", "root", "root", "internships" );
+$db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "cgt456group03" );
 
 //career account creation and login
 $ca_firstname = "";
@@ -168,6 +171,333 @@ if ( isset( $_POST[ 's_login' ] ) ) {
 		} else {
 			array_push( $errors, "The username and password do not match" );
 		}
+	}
+}
+
+//intern report
+$intern1_1_company = "";
+$intern1_2_address = "";
+$intern1_3_cgt = "";
+$intern1_4_supervisor_name = "";
+$intern1_5_supervisor_email = "";
+$intern1_6_supervisor_phone = "";
+
+$intern2_1_startdate = "";
+$intern2_2_enddate = "";
+$intern2_3_totalhours = "";
+$intern2_4_office = "";
+$intern2_5_activity_1 = "";
+$intern2_6_activity_2 = "";
+$intern2_7_activity_3 = "";
+$intern2_8_activity_4 = "";
+$intern2_9_activity_5 = "";
+
+$intern2_10_relevant_work = "";
+$intern2_11_problems = "";
+$intern2_12_workexperience = "";
+$intern2_13_learn = "";
+$intern2_14_cgt_sector_change = "";
+$intern2_15_future_employment = "";
+$intern2_16_rate_experience = "";
+
+$intern3_1_paid = "";
+$intern3_2_salary = "";
+$intern3_3_stipend = "";
+$intern3_4_assist = "";
+
+//if the submit intern report button is clicked
+if ( isset( $_POST[ 'intern_report' ] ) ) {
+	$ca_username = $_SESSION["username"];
+
+	$intern1_1_company = addslashes( $_POST[ "intern1_1_company" ] );
+	$intern1_2_address = addslashes( $_POST[ "intern1_2_address" ] );
+	$intern1_3_cgt = addslashes( $_POST[ "intern1_3_cgt" ] );
+	$intern1_4_supervisor_name = addslashes( $_POST[ "intern1_4_supervisor_name" ] );
+	$intern1_5_supervisor_email = addslashes( $_POST[ "intern1_5_supervisor_email" ] );
+	$intern1_6_supervisor_phone = addslashes( $_POST[ "intern1_6_supervisor_phone" ] );
+
+	$intern2_1_startdate = addslashes( $_POST[ "intern2_1_startdate" ] );
+	$intern2_2_enddate = addslashes( $_POST[ "intern2_2_enddate" ] );
+	$intern2_3_totalhours = addslashes( $_POST[ "intern2_3_totalhours" ] );
+	$intern2_4_office = addslashes( $_POST[ "intern2_4_office" ] );
+	$intern2_5_activity_1 = addslashes( $_POST[ "intern2_5_activity_1" ] );
+	$intern2_6_activity_2 = addslashes( $_POST[ "intern2_6_activity_2" ] );
+	$intern2_7_activity_3 = addslashes( $_POST[ "intern2_7_activity_3" ] );
+	$intern2_8_activity_4 = addslashes( $_POST[ "intern2_8_activity_4" ] );
+	$intern2_9_activity_5 = addslashes( $_POST[ "intern2_9_activity_5" ] );
+
+	$intern2_10_relevant_work = addslashes( $_POST[ "intern2_10_relevant_work" ] );
+	$intern2_11_problems = addslashes( $_POST[ "intern2_11_problems" ] );
+	$intern2_12_workexperience = addslashes( $_POST[ "intern2_12_workexperience" ] );
+	$intern2_13_learn = addslashes( $_POST[ "intern2_13_learn" ] );
+	$intern2_14_cgt_sector_change = addslashes( $_POST[ "intern2_14_cgt_sector_change" ] );
+	$intern2_15_future_employment = addslashes( $_POST[ "intern2_15_future_employment" ] );
+	$intern2_16_rate_experience = addslashes( $_POST[ "intern2_16_rate_experience" ] );
+
+	$intern3_1_paid = addslashes( $_POST[ "intern3_1_paid" ] );
+	$intern3_2_salary = addslashes( $_POST[ "intern3_2_salary" ] );
+	$intern3_3_stipend = addslashes( $_POST[ "intern3_3_stipend" ] );
+	$intern3_4_assist = addslashes( $_POST[ "intern3_4_assist" ] );
+
+	//ensure that form fields are filled properly
+	if ( empty( $intern1_1_company ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern1_2_address ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern1_3_cgt ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern1_4_supervisor_name ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern1_5_supervisor_email ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern1_6_supervisor_phone ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_1_startdate ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_2_enddate ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_3_totalhours ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_4_office ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_5_activity_1 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_6_activity_2 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_7_activity_3 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_8_activity_4 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_9_activity_5 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_10_relevant_work ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_11_problems ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_12_workexperience ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_13_learn ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_14_cgt_sector_change ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_15_future_employment ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern2_16_rate_experience ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern3_1_paid ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern3_2_salary ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern3_3_stipend ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $intern3_4_assist ) ) {
+		array_push( $errors, "Error" );
+	}
+
+	//if there are no errors, save user to db
+	if ( count( $errors ) == 0 ) {
+		$sql = "INSERT INTO internship_report (userid, intern1_1_company, intern1_2_address, intern1_3_cgt, intern1_4_supervisor_name, intern1_5_supervisor_email, intern1_6_supervisor_phone, intern2_1_startdate, intern2_2_enddate, intern2_3_totalhours, intern2_4_office, intern2_5_activity_1, intern2_6_activity_2, intern2_7_activity_3, intern2_8_activity_4, intern2_9_activity_5, intern2_10_relevant_work, intern2_11_problems, intern2_12_workexperience, intern2_13_learn, intern2_14_cgt_sector_change, intern2_15_future_employment, intern2_16_rate_experience, intern3_1_paid, intern3_2_salary, intern3_3_stipend, intern3_4_assist) VALUES ('$ca_username', '$intern1_1_company', '$intern1_2_address', '$intern1_3_cgt', '$intern1_4_supervisor_name', '$intern1_5_supervisor_email', '$intern1_6_supervisor_phone', '$intern2_1_startdate', '$intern2_2_enddate', '$intern2_3_totalhours', '$intern2_4_office', '$intern2_5_activity_1', '$intern2_6_activity_2', '$intern2_7_activity_3', '$intern2_8_activity_4', '$intern2_9_activity_5', '$intern2_10_relevant_work', '$intern2_11_problems', '$intern2_12_workexperience', '$intern2_13_learn', '$intern2_14_cgt_sector_change', '$intern2_15_future_employment', '$intern2_16_rate_experience', '$intern3_1_paid', '$intern3_2_salary', '$intern3_3_stipend', '$intern3_4_assist')";
+		//echo($sql);
+		mysqli_query( $db, $sql );
+		$_SESSION[ "username" ] = $ca_username;
+		$_SESSION[ "success" ] = "Successfully reported internship.";
+		header( "Location: internship_home.php" ); // redirect to internship home
+	}
+}
+
+//supervisor evaluation
+$super1 = "";
+$super2 = "";
+$super3 = "";
+$super4 = "";
+$super5 = "";
+$super6 = "";
+$super7 = "";
+$super8 = "";
+$super9 = "";
+$super10 = "";
+$super11 = "";
+$super12 = "";
+$super13 = "";
+$super14 = "";
+$super15 = "";
+$super16 = "";
+$super17 = "";
+$super18 = "";
+$super19 = "";
+$super20 = "";
+$super21 = "";
+$super22 = "";
+$super23 = "";
+$super24 = "";
+$super25 = "";
+$super26 = "";
+$super27 = "";
+$super28 = "";
+$super29 = "";
+$super30 = "";
+
+//if the submit intern report button is clicked
+if ( isset( $_POST[ 'intern_report' ] ) ) {
+	$s_email = $_SESSION["username"];
+
+	$super1 = addslashes( $_POST[ "super1" ] );
+	$super2 = addslashes( $_POST[ "super2" ] );
+	$super3 = addslashes( $_POST[ "super3" ] );
+	$super4 = addslashes( $_POST[ "super4" ] );
+	$super5 = addslashes( $_POST[ "super5" ] );
+	$super6 = addslashes( $_POST[ "super6" ] );
+	$super7 = addslashes( $_POST[ "super7" ] );
+	$super8 = addslashes( $_POST[ "super8" ] );
+	$super9 = addslashes( $_POST[ "super9" ] );
+	$super10 = addslashes( $_POST[ "super10" ] );
+	$super11 = addslashes( $_POST[ "super11" ] );
+	$super12 = addslashes( $_POST[ "super12" ] );
+	$super13 = addslashes( $_POST[ "super13" ] );
+	$super14 = addslashes( $_POST[ "super14" ] );
+	$super15 = addslashes( $_POST[ "super15" ] );
+	$super16 = addslashes( $_POST[ "super16" ] );
+	$super17 = addslashes( $_POST[ "super17" ] );
+	$super18 = addslashes( $_POST[ "super18" ] );
+	$super19 = addslashes( $_POST[ "super19" ] );
+	$super20 = addslashes( $_POST[ "super20" ] );
+	$super21 = addslashes( $_POST[ "super21" ] );
+	$super22 = addslashes( $_POST[ "super22" ] );
+	$super23 = addslashes( $_POST[ "super23" ] );
+	$super24 = addslashes( $_POST[ "super24" ] );
+	$super25 = addslashes( $_POST[ "super25" ] );
+	$super26 = addslashes( $_POST[ "super26" ] );
+	$super27 = addslashes( $_POST[ "super27" ] );
+	$super28 = addslashes( $_POST[ "super28" ] );
+	$super29 = addslashes( $_POST[ "super29" ] );
+	$super30 = addslashes( $_POST[ "super30" ] );
+
+
+	//ensure that form fields are filled properly
+	if ( empty( $super1 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super2 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super3 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super4 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super5 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super6 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super7 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super8 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super9 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super10 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super11 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super12 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super13 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super14 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super15 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super16 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super17 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super18 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super19 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super20 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super21 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super22 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super23 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super24 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super25 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super26 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super27 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super28 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super29 ) ) {
+		array_push( $errors, "Error" );
+	}
+	if ( empty( $super30 ) ) {
+		array_push( $errors, "Error" );
+	}
+
+	//if there are no errors, save user to db
+	if ( count( $errors ) == 0 ) {
+		$sql = "INSERT INTO super_eval (email, intern, super1, super2, super3, super4, super5, super6, super7, super8, super9, super10, super11, super12, super13, super14, super15, super16, super17, super18, super19, super20, super21, super22, super23, super24, super25, super26, super27, super28, super29, super30) VALUES ('$s_email', '$ca_username', '$super1', '$super2', '$super3', '$super4', '$super5', '$super6', '$super7', '$super8', '$super9', '$super10', '$super11', '$super12', '$super13', '$super14', '$super15', '$super16', '$super17', '$super18', '$super19', '$super20', '$super21', '$super22', '$super23', '$super24', '$super25', '$super26', '$super27', '$super28', '$super29', '$super30')";
+		//echo($sql);
+		mysqli_query( $db, $sql );
+		$_SESSION[ "username" ] = $s_email;
+		$_SESSION[ "success" ] = "Successfully reported internship.";
+		header( "Location: internship_home.php" ); // redirect to internship home
 	}
 }
 

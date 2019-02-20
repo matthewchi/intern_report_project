@@ -1,6 +1,6 @@
 <ul class="side-nav">
   <li class="side-nav"><a class="side-nav" href="#profile"><div class="side-icon">
-    <i class="fas fa-user-circle side-nav"></i></div>Profile</a></li>
+    <i class="fas fa-user-circle side-nav"></i></div><?php echo $_SESSION["username"]; ?></a></li>
 
   <li class="side-nav"><a class="side-nav active" href="#announcments"><div class="side-icon">
     <i class="fas fa-newspaper side-nav"></i></i></div>Announcments</a></li>

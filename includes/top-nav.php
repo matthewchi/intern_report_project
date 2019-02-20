@@ -15,7 +15,7 @@
     <li class="top-nav" style="float:right"><a class="top-nav" href="#capstone">Capstones</a></li>
     <li class="top-nav" style="float:right"><a class="top-nav" href="#jobs">Jobs</a></li>
     <li class="top-nav" style="float:right"><a class="top-nav" href="home.php">Home</a></li>
-    <li class="top-nav" style="float:right"><a class="top-nav" href="#profile">Profile</a></li>
+    <li class="top-nav" style="float:right"><a class="top-nav" href="#profile"><?php echo $_SESSION["username"]; ?></a></li>
 
   </div>
 
