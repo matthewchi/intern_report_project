@@ -95,10 +95,10 @@ include("includes/server.php");
                     <br>
 
                     Start Date<br>
-                    <label><input class="internship_report" type="text" name="intern2_1_startdate"><br></label>
+                    <label><input class="internship_report" type="date" name="intern2_1_startdate"><br></label>
 
                     End Date<br>
-                    <label><input class="internship_report" type="text" name="intern2_2_enddate"><br></label>
+                    <label><input class="internship_report" type="date" name="intern2_2_enddate"><br></label>
 
                     Total Hours Worked<br>
                     <label><input class="internship_report" type="text" name="intern2_3_totalhours"><br></label>
