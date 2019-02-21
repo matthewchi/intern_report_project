@@ -79,7 +79,7 @@ include("includes/server.php");
                         <input class="internship_report" type="email" name="intern1_5_supervisor_email"><br></label>
 
                     <label>Supervisor phone<br>
-                        <input class="internship_report" type="text" name="intern1_6_supervisor_phone"><br></label>
+                        <input class="internship_report intern1_6_supervisor_phone" type="text" name="intern1_6_supervisor_phone"><br></label>
 
                     <button type="button" id="next1" style="float:right;">Next</button>
 
