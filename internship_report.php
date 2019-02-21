@@ -83,6 +83,10 @@ include("includes/server.php");
 
                     <button type="button" id="next1" style="float:right;">Next</button>
 
+                    <br />
+                    <br />
+                    <br />
+
                 </div>
 
                 <div id="form2" style="display:none;">
