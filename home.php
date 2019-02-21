@@ -41,6 +41,10 @@ if (empty($_SESSION["username"])) {
   <!-- primary content -->
   <div class="main-content">
     <h2>Announcements</h2>
+	<h3>February 21, 2019</h3>
+	<p>Progress presentation day</p>
+	<h3>February 14, 2019</h3>
+	<p>First day of presenting and receiving feedback from Heather and T.R.</p>
   </div>
 
   <!-- secondary content -->

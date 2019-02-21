@@ -260,6 +260,11 @@ li a.side-nav {
 	margin-top: 10px;
 }
 
+a.side-nav:hover {
+	background-color: black;
+	color: white;
+}
+
 div.side-icon {
 	width: 20px;
 	display: inline-block;
