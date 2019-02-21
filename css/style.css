@@ -323,7 +323,7 @@ div.internship-report {
 
 }
 
-#next, #back, #internship-report-submit {
+#next1, #next2, #next3, #back1, #back2, #back3, #internship-report-submit {
 	background-color: #6E99B4;
 	color: white;
 	font-size: 18px;
@@ -340,7 +340,7 @@ div.internship-report {
 	transition-duration: 0.4s;
 }
 
-#next:hover, #back:hover, #internship-report-submit:hover {
+#next1:hover, #next2:hover, #next3:hover, #back1:hover, #back2:hover, #back3:hover, #internship-report-submit:hover {
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
