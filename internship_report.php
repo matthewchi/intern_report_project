@@ -1,6 +1,6 @@
 <?php
 
-include( "includes/server.php" );
+include("includes/server.php");
 
 ?>
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ include( "includes/server.php" );
                         and Design<br></label>
 
 
-                    Supervisor<br />
+                    Supervisor<br/>
 
                     <label>Name of Supervisor<br>
                         <input class="internship_report" type="text" name="intern1_4_supervisor_name"><br></label>
@@ -105,10 +105,10 @@ include( "includes/server.php" );
 
                     <label>Did you work in an office or on site?
 
-                    <br>
+                        <br>
 
-                    <input type="radio" name="intern2_4_office" value="yes" style="margin-top:4px;"> Yes<br>
-                    <input class="internship_report" type="radio" name="intern2_4_office" value="no"> No<br></label>
+                        <input type="radio" name="intern2_4_office" value="yes" style="margin-top:4px;"> Yes<br>
+                        <input class="internship_report" type="radio" name="intern2_4_office" value="no"> No<br></label>
 
 
                     List 5 activities that you regularly performed during your internship.
@@ -129,11 +129,14 @@ include( "includes/server.php" );
                     <label>Activity 5<br>
                         <input class="internship_report" type="text" name="intern2_9_activity_5"><br></label>
 
-                        <button type="button" id="next2" style="float:right;">Next</button>
+                    <button type="button" id="next2" style="float:right;">Next</button>
 
-                        <button type="button" id="back1">Back</button>
+                    <button type="button" id="back1">Back</button>
 
-                  <div id="form3" style="display:none;">
+
+                </div>
+
+                <div id="form3" style="display:none;">
                     <h3>3/4</h3>
 
                     <br>
@@ -169,15 +172,16 @@ include( "includes/server.php" );
                     <label><input type="radio" name="intern2_16_rate_experience" value="1"> Dissatisfied<br></label>
                     <label><input type="radio" name="intern2_16_rate_experience" value="2"> Neutral<br></label>
                     <label><input type="radio" name="intern2_16_rate_experience" value="3"> Satisfied<br></label>
-                    <label><input class="internship_report" type="radio" name="intern2_16_rate_experience" value="4"> Very
+                    <label><input class="internship_report" type="radio" name="intern2_16_rate_experience" value="4">
+                        Very
                         Satisfied<br></label>
 
                     <button type="button" id="next3" style="float:right;">Next</button>
 
                     <button type="button" id="back2">Back</button>
-                  </div>
+                </div>
 
-                  <div id="form4" style="display:none;">
+                <div id="form4" style="display:none;">
                     <h3>4/4</h3>
 
                     <br>
@@ -187,19 +191,24 @@ include( "includes/server.php" );
                     <br>
 
                     Were you paid?<br>
-                    <label><input type="radio" name="intern3_1_paid" value="yes" style="margin-top:4px;"> Yes<br></label>
-                    <label><input class="internship_report" type="radio" name="intern3_1_paid" value="no"> No<br></label>
+                    <label><input type="radio" name="intern3_1_paid" value="yes" style="margin-top:4px;">
+                        Yes<br></label>
+                    <label><input class="internship_report" type="radio" name="intern3_1_paid" value="no">
+                        No<br></label>
 
                     If so, how much?<br>
                     <label><input class="internship_report" type="text" name="intern3_2_salary"><br></label>
 
                     Did you receive a housing stipend?<br>
-                    <label><input type="radio" name="intern3_3_stipend" value="yes" style="margin-top:4px;"> Yes<br></label>
-                    <label><input class="internship_report" type="radio" name="intern3_3_stipend" value="no"> No<br></label>
+                    <label><input type="radio" name="intern3_3_stipend" value="yes" style="margin-top:4px;">
+                        Yes<br></label>
+                    <label><input class="internship_report" type="radio" name="intern3_3_stipend" value="no">
+                        No<br></label>
 
                     Did you receive any other financial assistance from the company for your internship? Please select
                     all that apply<br>
-                    <label><input type="checkbox" name="intern3_4_assist" value="perdiem" style="margin-top:4px;"> Per Diem
+                    <label><input type="checkbox" name="intern3_4_assist" value="perdiem" style="margin-top:4px;"> Per
+                        Diem
                         Allowance<br></label>
                     <label><input type="checkbox" name="intern3_4_assist" value="gas"> Gas Reimbursement<br></label>
                     <label><input type="checkbox" name="intern3_4_assist" value="vehicle"> Company Vehicle<br></label>
@@ -209,12 +218,10 @@ include( "includes/server.php" );
                     <label><input class="internship_report" type="checkbox" name="intern3_4_assist" value="other">
                         Other<br></label>
 
-                    <button type="button" id="back2">Back</button>
+                    <button type="button" id="back3">Back</button>
 
-                    <input style="float:right;" type="submit" name="intern_report" value="Submit" id="internship-report-submit">
-
-                  </div>
-
+                    <input style="float:right;" type="submit" name="intern_report" value="Submit"
+                           id="internship-report-submit">
 
                 </div>
             </form>
