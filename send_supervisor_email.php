@@ -23,16 +23,17 @@ $email = new PHPMailer();
     */
 
    /* Set the mail sender. */
-   $mail->setFrom('darth@empire.com', 'Darth Vader');
+   $mail->setFrom('cgt456group3@gmail.com', 'CGT 456 - Group 3');
 
    /* Add a recipient. */
-   $mail->addAddress('palpatine@empire.com', 'Emperor');
+   // Change value to supervisor's email from session variables
+   $mail->addAddress('oceans.varun@gmail.com', 'Varun');
 
    /* Set the subject. */
-   $mail->Subject = 'Force';
+   $mail->Subject = 'Test';
 
    /* Set the mail message body. */
-   $mail->Body = 'There is a great disturbance in the Force.';
+   $mail->Body = 'This is a test message';
 
    // Make it use SMTP
    $mail->isSMTP();
@@ -50,10 +51,10 @@ $email = new PHPMailer();
    $mail->SMTPSecure = 'tls';
    
    /* Username (email address). */
-   $mail->Username = 'myusername@gmail.com';
+   $mail->Username = 'cgt456group3@gmail.com';
    
    /* Google account password. */
-   $mail->Password = 'mypassword';
+   $mail->Password = 'goltZbach!';
 
    /* Finally send the mail. */
    $mail->send();
