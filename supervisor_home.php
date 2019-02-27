@@ -19,11 +19,9 @@ $db = mysqli_connect( "localhost", "root", "root", "internships" );
 			{
 				echo("0 results");
 			}
-
 			else
 			{
-				$row=$result->fetch_assoc();
-
+				$row=$result->fetch_array();
 			}
 
 ?>
@@ -55,16 +53,19 @@ $db = mysqli_connect( "localhost", "root", "root", "internships" );
 
   <div class="internship">
     <h2>Your Interns</h2>
+  </div>
 
-    <div class="internship-tile">
+	<div class="internship">
+
       <h4><?php	if($result->num_rows !=0) { echo(trim($row["userid"]));} ?></h4>
-      <p style="display:inline;">
+			<p style="display:inline;">
         Intern evaluation complete, yes or no.
       </p>
       <a style="float:right; display:inline;" href="url">edit</a>
-    </div>
 
   </div>
+
+	<?php include("includes/interns.php");?>
 
 </div>
 

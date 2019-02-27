@@ -2,6 +2,8 @@
 
 include("includes/server.php");
 
+$intern_name = $_SESSION["intern_name"];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,14 +35,16 @@ include("includes/server.php");
     <div class="internship">
         <h2>Intern Performance Evaluation</h2>
 
+        <?php include("includes/error.php");?>
+
         <div class="internship-report">
-            <form action="/action_page.php">
+            <form method="post" action="supervisor_report.php">
 
                 <div id="intern-eval">
 
                     <br/>
 
-                    Name of Intern
+                    <?php echo $intern_name; ?>
 
                     <br />
 
@@ -77,7 +81,7 @@ include("includes/server.php");
                                 <input type="radio" name="super1" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super1" value="na">
+                                <input type="radio" name="super1" value="3">
                             </td>
                         </tr>
 
@@ -95,7 +99,7 @@ include("includes/server.php");
                                 <input type="radio" name="super2" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super2" value="na">
+                                <input type="radio" name="super2" value="3">
                             </td>
                         </tr>
 
@@ -113,7 +117,7 @@ include("includes/server.php");
                                 <input type="radio" name="super3" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super3" value="na">
+                                <input type="radio" name="super3" value="3">
                             </td>
                         </tr>
 
@@ -131,7 +135,7 @@ include("includes/server.php");
                                 <input type="radio" name="super4" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super4" value="na">
+                                <input type="radio" name="super4" value="3">
                             </td>
                         </tr>
 
@@ -149,7 +153,7 @@ include("includes/server.php");
                                 <input type="radio" name="super5" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super5" value="na">
+                                <input type="radio" name="super5" value="3">
                             </td>
                         </tr>
 
@@ -167,7 +171,7 @@ include("includes/server.php");
                                 <input type="radio" name="super6" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super6" value="na">
+                                <input type="radio" name="super6" value="3">
                             </td>
                         </tr>
 
@@ -185,7 +189,7 @@ include("includes/server.php");
                                 <input type="radio" name="super7" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super7" value="na">
+                                <input type="radio" name="super7" value="3">
                             </td>
                         </tr>
 
@@ -203,7 +207,7 @@ include("includes/server.php");
                                 <input type="radio" name="super8" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super8" value="na">
+                                <input type="radio" name="super8" value="3">
                             </td>
                         </tr>
 
@@ -222,7 +226,7 @@ include("includes/server.php");
                                 <input type="radio" name="super9" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super9" value="na">
+                                <input type="radio" name="super9" value="3">
                             </td>
                         </tr>
 
@@ -240,7 +244,7 @@ include("includes/server.php");
                                 <input type="radio" name="super10" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super10" value="na">
+                                <input type="radio" name="super10" value="3">
                             </td>
                         </tr>
 
@@ -258,7 +262,7 @@ include("includes/server.php");
                                 <input type="radio" name="super11" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super11" value="na">
+                                <input type="radio" name="super11" value="3">
                             </td>
                         </tr>
 
@@ -276,7 +280,7 @@ include("includes/server.php");
                                 <input type="radio" name="super12" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super12" value="na">
+                                <input type="radio" name="super12" value="3">
                             </td>
                         </tr>
 
@@ -294,7 +298,7 @@ include("includes/server.php");
                                 <input type="radio" name="super13" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super13" value="na">
+                                <input type="radio" name="super13" value="3">
                             </td>
                         </tr>
 
@@ -312,7 +316,7 @@ include("includes/server.php");
                                 <input type="radio" name="super14" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super14" value="na">
+                                <input type="radio" name="super14" value="3">
                             </td>
                         </tr>
 
@@ -330,7 +334,7 @@ include("includes/server.php");
                                 <input type="radio" name="super15" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super15" value="na">
+                                <input type="radio" name="super15" value="3">
                             </td>
                         </tr>
 
@@ -348,7 +352,7 @@ include("includes/server.php");
                                 <input type="radio" name="super16" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super16" value="na">
+                                <input type="radio" name="super16" value="3">
                             </td>
                         </tr>
 
@@ -366,7 +370,7 @@ include("includes/server.php");
                                 <input type="radio" name="super17" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super17" value="na">
+                                <input type="radio" name="super17" value="3">
                             </td>
                         </tr>
 
@@ -384,7 +388,7 @@ include("includes/server.php");
                                 <input type="radio" name="super18" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super18" value="na">
+                                <input type="radio" name="super18" value="3">
                             </td>
                         </tr>
 
@@ -402,7 +406,7 @@ include("includes/server.php");
                                 <input type="radio" name="super19" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super19" value="na">
+                                <input type="radio" name="super19" value="3">
                             </td>
                         </tr>
 
@@ -420,7 +424,7 @@ include("includes/server.php");
                                 <input type="radio" name="super20" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super20" value="na">
+                                <input type="radio" name="super20" value="3">
                             </td>
                         </tr>
 
@@ -429,22 +433,22 @@ include("includes/server.php");
                                 Uses time effectively
                             </td>
                             <td>
-                                <input type="radio" name="super30" value="2">
+                                <input type="radio" name="super21" value="2">
                             </td>
                             <td>
-                                <input type="radio" name="super30" value="1">
+                                <input type="radio" name="super21" value="1">
                             </td>
                             <td>
-                                <input type="radio" name="super30" value="0">
+                                <input type="radio" name="super21" value="0">
                             </td>
                             <td>
-                                <input type="radio" name="super30" value="na">
+                                <input type="radio" name="super21" value="3">
                             </td>
                         </tr>
 
                     </table>
 
-                    <input type="submit" value="Submit" style="float:right;">
+                    <input type="submit" name="submit_intern" value="Submit" style="float:right;">
                 </div>
             </form>
         </div>

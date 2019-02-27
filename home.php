@@ -7,6 +7,19 @@ if (empty($_SESSION["username"])) {
 	header("Location: index.php");
 }
 
+//get all posts
+$sql = "SELECT * FROM announcement ORDER BY id DESC";
+$result = mysqli_query($db, $sql);
+
+if($result->num_rows == 0)
+{
+	echo("0 results");
+}
+else
+{
+	$row=$result->fetch_array();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,27 +52,39 @@ if (empty($_SESSION["username"])) {
   </div>
 
   <!-- primary content -->
-  <div class="main-content">
-    <h2>Announcements</h2>
-	<h3>February 21, 2019</h3>
-	<p>Work Day</p>
-	<br />
-    <p>Tasks completed</p>
-    <ul>
-		<li class="announceList">Databases connected for login and submitting form</li>
-		<li class="announceList">Announcements added</li>
-    </ul>
-    <br />
-	<h3>February 14, 2019</h3>
-	<p>First day of presenting and receiving feedback from Heather and T.R.</p>
-	<br />
-	<p>Things to do:</p>
-	<ul>
-		<li class="announceList">Connect the database</li>
-		<li class="announceList">Styling and formatting throughout the site</li>
-		<li class="announceList">Work on supervisor and advisor pages</li>
-	</ul>
-  </div>
+	<div class="main-content">
+		<div class="post">
+			<h3>Create Announcement</h3>
+			<form method="post" action="home.php">
+				<input class="announcement" type="text" name="post_content"/><br />
+				<button type="submit" name="submit_post">Post</button>
+			</form>
+		</div>
+
+		<?php include("includes/announcements.php");?>
+
+	  <div class="post">
+		<h3>February 21, 2019</h3>
+		<p>Work Day</p>
+		<br />
+	    <p>Tasks completed</p>
+	    <ul>
+			<li class="announceList">Databases connected for login and submitting form</li>
+			<li class="announceList">Announcements added</li>
+	    </ul>
+		</div>
+		<div class="post">
+			<h3>February 14, 2019</h3>
+			<p>First day of presenting and receiving feedback from Heather and T.R.</p>
+			<br />
+			<p>Things to do:</p>
+			<ul>
+				<li class="announceList">Connect the database</li>
+				<li class="announceList">Styling and formatting throughout the site</li>
+				<li class="announceList">Work on supervisor and advisor pages</li>
+			</ul>
+		</div>
+	</div>
 
   <!-- secondary content -->
   <div class="right-content">

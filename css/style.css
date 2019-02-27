@@ -79,6 +79,10 @@ div.landing-page {
 	height: 680px;
 }
 
+div.footer {
+	padding: 20px;
+}
+
 div.industry-content {
 	background-color: #efefef;
 	border-top-left-radius: 10px;
@@ -291,16 +295,26 @@ div.side-nav {
 	padding: 5px;
 }
 
-div.main-content {
+div.post {
 	background-color: white;
 	width: 510px;
-	height: 600px;
+	height: auto;
 	display: inline-block;
 	margin-top: 10px;
 	margin-right: -4px;
 	margin-left: 200px;
-	padding: 5px;
+	padding: 20px;
 	border-radius: 5px;
+}
+
+div.main-content {
+	width: 510px;
+	height: auto;
+	display: inline-block;
+}
+
+.announcement {
+	width: 470px;
 }
 
 .announceList {

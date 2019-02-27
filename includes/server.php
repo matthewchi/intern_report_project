@@ -3,11 +3,15 @@ session_start();
 
 $errors = array();
 
+//$interns = array();
+
+$announcements = array();
+
 //connect to localhost
-//$db = mysqli_connect( "localhost", "root", "root", "internships" );
+$db = mysqli_connect( "localhost", "root", "root", "internships" );
 
 //connect to db
-$db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "cgt456group03" );
+//$db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "cgt456group03" );
 
 //career account creation and login
 $ca_firstname = "";
@@ -167,7 +171,7 @@ if ( isset( $_POST[ 's_login' ] ) ) {
 			//log user in
 			$_SESSION[ "username" ] = $s_email;
 			$_SESSION[ "success" ] = "You are now logged in";
-			header( "Location: home.php" ); // redirect to homepage
+			header( "Location: supervisor_home.php" ); // redirect to supervisor home
 		} else {
 			array_push( $errors, "The username and password do not match" );
 		}
@@ -352,19 +356,12 @@ $super18 = "";
 $super19 = "";
 $super20 = "";
 $super21 = "";
-$super22 = "";
-$super23 = "";
-$super24 = "";
-$super25 = "";
-$super26 = "";
-$super27 = "";
-$super28 = "";
-$super29 = "";
-$super30 = "";
 
 //if the submit intern report button is clicked
-if ( isset( $_POST[ 'intern_report' ] ) ) {
+if ( isset( $_POST[ 'submit_intern' ] ) ) {
 	$s_email = $_SESSION["username"];
+
+	$intern = $_SESSION["intern_name"];
 
 	$super1 = addslashes( $_POST[ "super1" ] );
 	$super2 = addslashes( $_POST[ "super2" ] );
@@ -387,117 +384,113 @@ if ( isset( $_POST[ 'intern_report' ] ) ) {
 	$super19 = addslashes( $_POST[ "super19" ] );
 	$super20 = addslashes( $_POST[ "super20" ] );
 	$super21 = addslashes( $_POST[ "super21" ] );
-	$super22 = addslashes( $_POST[ "super22" ] );
-	$super23 = addslashes( $_POST[ "super23" ] );
-	$super24 = addslashes( $_POST[ "super24" ] );
-	$super25 = addslashes( $_POST[ "super25" ] );
-	$super26 = addslashes( $_POST[ "super26" ] );
-	$super27 = addslashes( $_POST[ "super27" ] );
-	$super28 = addslashes( $_POST[ "super28" ] );
-	$super29 = addslashes( $_POST[ "super29" ] );
-	$super30 = addslashes( $_POST[ "super30" ] );
-
 
 	//ensure that form fields are filled properly
 	if ( empty( $super1 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 1" );
 	}
 	if ( empty( $super2 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 2" );
 	}
 	if ( empty( $super3 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 3" );
 	}
 	if ( empty( $super4 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 4" );
 	}
 	if ( empty( $super5 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 5" );
 	}
 	if ( empty( $super6 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 6" );
 	}
 	if ( empty( $super7 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 7" );
 	}
 	if ( empty( $super8 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 8" );
 	}
 	if ( empty( $super9 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 9" );
 	}
 	if ( empty( $super10 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 10" );
 	}
 	if ( empty( $super11 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 11" );
 	}
 	if ( empty( $super12 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 12" );
 	}
 	if ( empty( $super13 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 13" );
 	}
 	if ( empty( $super14 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 14" );
 	}
 	if ( empty( $super15 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 15" );
 	}
 	if ( empty( $super16 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 16" );
 	}
 	if ( empty( $super17 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 17" );
 	}
 	if ( empty( $super18 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 18" );
 	}
 	if ( empty( $super19 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 19" );
 	}
 	if ( empty( $super20 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 20" );
 	}
 	if ( empty( $super21 ) ) {
-		array_push( $errors, "Error" );
+		array_push( $errors, "Error 21" );
 	}
-	if ( empty( $super22 ) ) {
-		array_push( $errors, "Error" );
+
+	//if there are no errors, save user to db
+	if ( count( $errors ) == 0 ) {
+		$sql = "INSERT INTO super_eval (email, intern, super1, super2, super3, super4, super5, super6, super7, super8, super9, super10, super11, super12, super13, super14, super15, super16, super17, super18, super19, super20, super21) VALUES ('$s_email', '$intern', '$super1', '$super2', '$super3', '$super4', '$super5', '$super6', '$super7', '$super8', '$super9', '$super10', '$super11', '$super12', '$super13', '$super14', '$super15', '$super16', '$super17', '$super18', '$super19', '$super20', '$super21')";
+		//echo($sql);
+		mysqli_query( $db, $sql );
+		$_SESSION[ "username" ] = $s_email;
+		$_SESSION[ "success" ] = "Successfully evaluated intern.";
+		header( "Location: supervisor_home.php" ); // redirect to internship home
 	}
-	if ( empty( $super23 ) ) {
-		array_push( $errors, "Error" );
-	}
-	if ( empty( $super24 ) ) {
-		array_push( $errors, "Error" );
-	}
-	if ( empty( $super25 ) ) {
-		array_push( $errors, "Error" );
-	}
-	if ( empty( $super26 ) ) {
-		array_push( $errors, "Error" );
-	}
-	if ( empty( $super27 ) ) {
-		array_push( $errors, "Error" );
-	}
-	if ( empty( $super28 ) ) {
-		array_push( $errors, "Error" );
-	}
-	if ( empty( $super29 ) ) {
-		array_push( $errors, "Error" );
-	}
-	if ( empty( $super30 ) ) {
+}
+
+//if the evaluate intern button is clicked
+if ( isset( $_POST[ 'intern_eval' ] ) ) {
+
+	$intern_name = addslashes( $_POST[ "intern_name" ] );
+
+	$_SESSION[ "intern_name" ] = $intern_name;
+
+	header( "Location: supervisor_report.php" ); // redirect to internship home
+}
+
+//if the submit post button is clicked
+if ( isset( $_POST[ 'submit_post' ] ) ) {
+	$ca_username = $_SESSION["username"];
+
+	$post_time = date("m/d/y");
+	$post_content = addslashes( $_POST[ "post_content" ] );
+
+	//ensure that form fields are filled properly
+	if ( empty( $post_content ) ) {
 		array_push( $errors, "Error" );
 	}
 
 	//if there are no errors, save user to db
 	if ( count( $errors ) == 0 ) {
-		$sql = "INSERT INTO super_eval (email, intern, super1, super2, super3, super4, super5, super6, super7, super8, super9, super10, super11, super12, super13, super14, super15, super16, super17, super18, super19, super20, super21, super22, super23, super24, super25, super26, super27, super28, super29, super30) VALUES ('$s_email', '$ca_username', '$super1', '$super2', '$super3', '$super4', '$super5', '$super6', '$super7', '$super8', '$super9', '$super10', '$super11', '$super12', '$super13', '$super14', '$super15', '$super16', '$super17', '$super18', '$super19', '$super20', '$super21', '$super22', '$super23', '$super24', '$super25', '$super26', '$super27', '$super28', '$super29', '$super30')";
+		$sql = "INSERT INTO announcement (user_id, post_time, post_content) VALUES ('$ca_username', '$post_time', '$post_content')";
 		//echo($sql);
 		mysqli_query( $db, $sql );
-		$_SESSION[ "username" ] = $s_email;
-		$_SESSION[ "success" ] = "Successfully reported internship.";
-		header( "Location: internship_home.php" ); // redirect to internship home
+		$_SESSION[ "username" ] = $ca_username;
+		$_SESSION[ "success" ] = "Successfully made post.";
+		header( "Location: home.php" ); // redirect to internship home
 	}
 }
 

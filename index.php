@@ -119,5 +119,14 @@ include( "includes/server.php" );
     </div>
 </div>
 
+<div class="footer">
+  <div class="container">
+    <h3>Footer</h3>
+    <p>
+      Link
+    </p>
+  </div>
+</div>
+
 </body>
 </html>
