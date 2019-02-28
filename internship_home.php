@@ -66,7 +66,7 @@ else
 				<?php
 				while ($row = $result->fetch_array()) {
 
-				  echo $row['intern1_1_company'];
+				  echo $row['intern1_1_company'].'<br>';
 
 				}
 				?>
