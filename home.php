@@ -66,6 +66,17 @@ else
 		
 		<?php include("includes/announcements.php");?>
 
+        <div class="post">
+            <h3>February 28, 2019</h3>
+            <p>Presentation Day</p>
+            <br />
+            <p>Tasks completed</p>
+            <ul>
+                <li class="announceList">Advisor dashboard</li>
+                <li class="announceList">Advisor can view list of submissions</li>
+                <li class="announceList">Logout added</li>
+            </ul>
+        </div>
 	  <div class="post">
 		<h3>February 21, 2019</h3>
 		<p>Work Day</p>
@@ -75,8 +86,8 @@ else
 			<li class="announceList">Databases connected for login and submitting form</li>
 			<li class="announceList">Announcements added</li>
 	    </ul>
-		</div>
-		<div class="post">
+        </div>
+        <div class="post">
 			<h3>February 14, 2019</h3>
 			<p>First day of presenting and receiving feedback from Heather and T.R.</p>
 			<br />
