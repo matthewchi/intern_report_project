@@ -12,7 +12,7 @@ if ( $query->num_rows > 0 ) {
 		$catid = $row[ "accounttype" ];
 		if ( $catid == 1 ) {
 			$catname = "Student";
-			
+			$_SESSION["student"] = $catname;
 		} else if ( $catid == 2 ) {
 			$catname = "Supervisor";
 			$_SESSION["post"] = $catname;

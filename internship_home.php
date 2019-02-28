@@ -7,6 +7,19 @@ if (empty($_SESSION["username"])) {
 	header("Location: index.php");
 }
 
+//get all internships
+$sql = "SELECT * FROM internship_report ORDER BY id DESC";
+$result = mysqli_query($db, $sql);
+
+if($result->num_rows == 0)
+{
+	echo("0 results");
+}
+else
+{
+	//$row=$result->fetch_array();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,6 +52,27 @@ if (empty($_SESSION["username"])) {
   <div class="internship">
     <h2>Your Internships</h2>
 
+		<?php if (isset($_SESSION["post"])): ?>
+				<?php
+				while ($row = $result->fetch_array()) {
+
+				  echo $row['email'];
+
+				}
+				?>
+		<?php endif ?>
+
+		<?php if (isset($_SESSION["student"])): ?>
+				<?php
+				while ($row = $result->fetch_array()) {
+
+				  echo $row['intern1_1_company'];
+
+				}
+				?>
+		<?php endif ?>
+
+<!--
     <div class="internship-tile">
       <h4>Name of Internship</h4>
       <p style="display:inline;">
@@ -46,7 +80,8 @@ if (empty($_SESSION["username"])) {
       </p>
       <a style="float:right; display:inline;" href="url">edit</a>
     </div>
-
+-->
+		<br />
     <button type="button" onclick="location.href='internship_report.php'">Report Internship</button>
   </div>
 
