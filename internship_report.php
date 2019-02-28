@@ -2,11 +2,18 @@
 
 include("includes/server.php");
 
+//if user is not logged in, they cannot access this page
+if (empty($_SESSION["username"])) {
+	header("Location: index.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Internship Report Form</title>
+
+		<link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -34,7 +41,7 @@ include("includes/server.php");
         <h1>Internship Report</h1>
 
         <div class="internship-report">
-            <form method="post" action="internship_report.php">
+            <form method="post" action="internship_report.php" enctype="multipart/form-data">
 
                 <div id="form1">
                     <h3>1/4</h3>
@@ -79,7 +86,10 @@ include("includes/server.php");
                         <input class="internship_report" type="email" name="intern1_5_supervisor_email"><br></label>
 
                     <label>Supervisor phone<br>
-                        <input class="internship_report intern1_6_supervisor_phone" type="text" name="intern1_6_supervisor_phone"><br></label>
+                        <input class="internship_report" type="text" name="intern1_6_supervisor_phone"><br></label>
+
+                    <label>Select file to upload:<br />
+                        <input class="internship_report" type="file" name="fileToUpload" id="fileToUpload"><br /></label>
 
                     <button type="button" id="next1" style="float:right;">Next</button>
 

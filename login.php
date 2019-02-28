@@ -9,6 +9,8 @@ include( "includes/server.php" );
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Login</title>
 
+	<link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
+
 	<link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>

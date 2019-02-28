@@ -1,6 +1,7 @@
 <?php
 
 include( "includes/server.php" );
+include( "accountName.php" );
 
 //if user is not logged in, they cannot access this page
 if (empty($_SESSION["username"])) {
@@ -17,7 +18,7 @@ if($result->num_rows == 0)
 }
 else
 {
-	$row=$result->fetch_array();
+	//$row=$result->fetch_array();
 }
 
 ?>
@@ -53,14 +54,16 @@ else
 
   <!-- primary content -->
 	<div class="main-content">
-		<div class="post">
-			<h3>Create Announcement</h3>
-			<form method="post" action="home.php">
-				<input class="announcement" type="text" name="post_content"/><br />
-				<button type="submit" name="submit_post">Post</button>
-			</form>
-		</div>
-
+		<?php if (isset($_SESSION["post"])): ?>
+			<div class="post">
+				<h3>Create Announcement</h3>
+				<form method="post" action="home.php">
+					<input class="announcement" type="text" name="post_content"/><br />
+					<button type="submit" name="submit_post">Post</button>
+				</form>
+			</div>
+		<?php endif ?>
+		
 		<?php include("includes/announcements.php");?>
 
 	  <div class="post">

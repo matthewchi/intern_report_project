@@ -2,11 +2,16 @@
 
 include( "includes/server.php" );
 
+//if user is not logged in, they cannot access this page
+if (empty($_SESSION["username"])) {
+	header("Location: index.php");
+}
+
 //connect to localhost
-$db = mysqli_connect( "localhost", "root", "root", "internships" );
+//$db = mysqli_connect( "localhost", "root", "root", "internships" );
 
 //connect to db
-//$db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "cgt456group03" );
+$db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "cgt456group03" );
 
 //user id
 			$s_email = $_SESSION["username"];
@@ -21,7 +26,7 @@ $db = mysqli_connect( "localhost", "root", "root", "internships" );
 			}
 			else
 			{
-				$row=$result->fetch_array();
+				//$row=$result->fetch_array();
 			}
 
 ?>
@@ -29,6 +34,8 @@ $db = mysqli_connect( "localhost", "root", "root", "internships" );
 <html>
 <head>
 <title>Supervisor Dashboard</title>
+
+<link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 

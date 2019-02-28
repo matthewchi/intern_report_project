@@ -8,7 +8,7 @@
         <li class="top-nav search">
             <form class="top-nav"><input class="top-nav" placeholder="Search"/><i class="fas fa-search"></i></form>
         </li>
-
+<!--
         <li class="top-nav options" style="float:right">
             <div class="dropdown">
                 <button class="dropButton"><i class="fas fa-caret-down"></i></button>
@@ -17,6 +17,10 @@
                 </div>
             </div>
         </li>
+-->
+        <?php if (isset($_SESSION["username"])): ?>
+          <li class="top-nav" style="float:right"><a class="top-nav" href="index.php?logout='1'">Logout</a></li>
+		    <?php endif ?>
 
         <li class="top-nav" style="float:right"><a class="top-nav" href="internship_home.php">Internships</a></li>
         <li class="top-nav" style="float:right"><a class="top-nav" href="#capstone">Capstones</a></li>

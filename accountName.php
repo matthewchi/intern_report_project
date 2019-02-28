@@ -12,16 +12,22 @@ if ( $query->num_rows > 0 ) {
 		$catid = $row[ "accounttype" ];
 		if ( $catid == 1 ) {
 			$catname = "Student";
+			
 		} else if ( $catid == 2 ) {
 			$catname = "Supervisor";
+			$_SESSION["post"] = $catname;
 		} else if ( $catid == 3 ) {
 			$catname = "Advisor";
+			$_SESSION["post"] = $catname;
 		} else if ( $catid == 4 ) {
 			$catname = "Administration";
+			$_SESSION["post"] = $catname;
 		} else if ( $catid == 5 ) {
 			$catname = "Faculty";
+			$_SESSION["post"] = $catname;
 		} else if ( $catid == 6 ) {
 			$catname = "Admin";
+			$_SESSION["post"] = $catname;
 		}
 	}
 }

@@ -8,10 +8,10 @@ $errors = array();
 $announcements = array();
 
 //connect to localhost
-$db = mysqli_connect( "localhost", "root", "root", "internships" );
+//$db = mysqli_connect( "localhost", "root", "root", "internships" );
 
 //connect to db
-//$db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "cgt456group03" );
+$db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "cgt456group03" );
 
 //career account creation and login
 $ca_firstname = "";
@@ -106,6 +106,8 @@ if ( isset( $_POST[ "login" ] ) ) {
 if ( isset( $_GET[ "logout" ] ) ) {
 	session_destroy();
 	unset( $_SESSION[ "username" ] );
+	unset( $_SESSION[ "intern_name" ] );
+	unset( $_SESSION[ "post" ] );
 	header( "Location: index.php" );
 }
 
@@ -211,6 +213,7 @@ $intern3_4_assist = "";
 
 //if the submit intern report button is clicked
 if ( isset( $_POST[ 'intern_report' ] ) ) {
+
 	$ca_username = $_SESSION["username"];
 
 	$intern1_1_company = addslashes( $_POST[ "intern1_1_company" ] );
