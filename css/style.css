@@ -39,6 +39,50 @@ input.internship_report {
 	color: white;
 	padding-top: 12px;
 	margin-right: 4px;
+    margin-left: 20px;
+}
+
+/* Dropdown Button */
+.dropButton {
+    background-color: #C28E0E;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropContent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 0;
+}
+
+/* Links inside the dropdown */
+.dropContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropContent a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropContent {
+    display: block;
 }
 
 .brand i {
