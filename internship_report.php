@@ -41,8 +41,7 @@ if (empty($_SESSION["username"])) {
         <h1>Internship Report</h1>
 
         <div class="internship-report">
-            <form method="post" action="internship_report.php" enctype="multipart/form-data">
-
+            <form method="post" action="send_supervisor_email.php" enctype="multipart/form-data">
                 <div id="form1">
                     <h3>1/4</h3>
 
@@ -63,8 +62,7 @@ if (empty($_SESSION["username"])) {
                     <br>
                     Type/Sector of CGT Industry - select all that apply
                     <br/>
-                    <label><input type="checkbox" name="intern1_3_cgt" value="animation" style="margin-top:4px;">
-                        Animation<br></label>
+                    <label><input type="checkbox" name="intern1_3_cgt" value="animation" style="margin-top:4px;">Animation<br></label>
                     <label><input type="checkbox" name="intern1_3_cgt" value="construction"> Construction<br></label>
                     <label><input type="checkbox" name="intern1_3_cgt" value="dataviz"> Data Visualization<br></label>
                     <label><input type="checkbox" name="intern1_3_cgt" value="game"> Game<br></label>

@@ -33,7 +33,7 @@ $intern_name = $_SESSION["intern_name"];
 
 <!-- top nav bar -->
 <div class="top-nav">
-    <?php include("includes/top-nav.php"); ?>
+    <?php include("includes/super-nav.php"); ?>
 </div>
 
 <!-- max width 760px -->

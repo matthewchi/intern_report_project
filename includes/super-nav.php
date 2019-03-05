@@ -22,10 +22,7 @@
           <li class="top-nav" style="float:right"><a class="top-nav" href="index.php?logout='1'">Logout</a></li>
 		    <?php endif ?>
 
-        <li class="top-nav" style="float:right"><a class="top-nav" href="internship_home.php">Internships</a></li>
-        <li class="top-nav" style="float:right"><a class="top-nav" href="#capstone">Capstones</a></li>
-        <li class="top-nav" style="float:right"><a class="top-nav" href="#jobs">Jobs</a></li>
-        <li class="top-nav" style="float:right"><a class="top-nav" href="home.php">Home</a></li>
+        <li class="top-nav" style="float:right"><a class="top-nav" href="supervisor_home.php">Home</a></li>
         <li class="top-nav" style="float:right"><a class="top-nav" href="account.php"><?php echo $_SESSION["fname"]; ?></a></li>
 
     </div>

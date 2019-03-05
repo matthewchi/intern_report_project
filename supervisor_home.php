@@ -1,6 +1,7 @@
 <?php
 
 include( "includes/server.php" );
+include( "includes/supervisorName.php" );
 
 //if user is not logged in, they cannot access this page
 if (empty($_SESSION["username"])) {
@@ -52,7 +53,7 @@ $db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "
 
 <!-- top nav bar -->
 <div class="top-nav">
-    <?php include("includes/top-nav.php");?>
+    <?php include("includes/super-nav.php");?>
 </div>
 
 <!-- max width 760px -->

@@ -108,6 +108,8 @@ if ( isset( $_GET[ "logout" ] ) ) {
 	unset( $_SESSION[ "username" ] );
 	unset( $_SESSION[ "intern_name" ] );
 	unset( $_SESSION[ "post" ] );
+	unset( $_SESSION[ "fname" ] );
+	unset( $_SESSION[ "name" ] );
 	header( "Location: index.php" );
 }
 
@@ -210,6 +212,9 @@ $intern3_1_paid = "";
 $intern3_2_salary = "";
 $intern3_3_stipend = "";
 $intern3_4_assist = "";
+
+$supervisor_eval = "Incomplete";
+$advisor_approve = "Unapproved";
 
 //if the submit intern report button is clicked
 if ( isset( $_POST[ 'intern_report' ] ) ) {
@@ -328,7 +333,7 @@ if ( isset( $_POST[ 'intern_report' ] ) ) {
 
 	//if there are no errors, save user to db
 	if ( count( $errors ) == 0 ) {
-		$sql = "INSERT INTO internship_report (userid, intern1_1_company, intern1_2_address, intern1_3_cgt, intern1_4_supervisor_name, intern1_5_supervisor_email, intern1_6_supervisor_phone, intern2_1_startdate, intern2_2_enddate, intern2_3_totalhours, intern2_4_office, intern2_5_activity_1, intern2_6_activity_2, intern2_7_activity_3, intern2_8_activity_4, intern2_9_activity_5, intern2_10_relevant_work, intern2_11_problems, intern2_12_workexperience, intern2_13_learn, intern2_14_cgt_sector_change, intern2_15_future_employment, intern2_16_rate_experience, intern3_1_paid, intern3_2_salary, intern3_3_stipend, intern3_4_assist) VALUES ('$ca_username', '$intern1_1_company', '$intern1_2_address', '$intern1_3_cgt', '$intern1_4_supervisor_name', '$intern1_5_supervisor_email', '$intern1_6_supervisor_phone', '$intern2_1_startdate', '$intern2_2_enddate', '$intern2_3_totalhours', '$intern2_4_office', '$intern2_5_activity_1', '$intern2_6_activity_2', '$intern2_7_activity_3', '$intern2_8_activity_4', '$intern2_9_activity_5', '$intern2_10_relevant_work', '$intern2_11_problems', '$intern2_12_workexperience', '$intern2_13_learn', '$intern2_14_cgt_sector_change', '$intern2_15_future_employment', '$intern2_16_rate_experience', '$intern3_1_paid', '$intern3_2_salary', '$intern3_3_stipend', '$intern3_4_assist')";
+		$sql = "INSERT INTO internship_report (userid, intern1_1_company, intern1_2_address, intern1_3_cgt, intern1_4_supervisor_name, intern1_5_supervisor_email, intern1_6_supervisor_phone, intern2_1_startdate, intern2_2_enddate, intern2_3_totalhours, intern2_4_office, intern2_5_activity_1, intern2_6_activity_2, intern2_7_activity_3, intern2_8_activity_4, intern2_9_activity_5, intern2_10_relevant_work, intern2_11_problems, intern2_12_workexperience, intern2_13_learn, intern2_14_cgt_sector_change, intern2_15_future_employment, intern2_16_rate_experience, intern3_1_paid, intern3_2_salary, intern3_3_stipend, intern3_4_assist, supervisor_eval, advisor_approve) VALUES ('$ca_username', '$intern1_1_company', '$intern1_2_address', '$intern1_3_cgt', '$intern1_4_supervisor_name', '$intern1_5_supervisor_email', '$intern1_6_supervisor_phone', '$intern2_1_startdate', '$intern2_2_enddate', '$intern2_3_totalhours', '$intern2_4_office', '$intern2_5_activity_1', '$intern2_6_activity_2', '$intern2_7_activity_3', '$intern2_8_activity_4', '$intern2_9_activity_5', '$intern2_10_relevant_work', '$intern2_11_problems', '$intern2_12_workexperience', '$intern2_13_learn', '$intern2_14_cgt_sector_change', '$intern2_15_future_employment', '$intern2_16_rate_experience', '$intern3_1_paid', '$intern3_2_salary', '$intern3_3_stipend', '$intern3_4_assist', '$supervisor_eval', '$advisor_approve')";
 		//echo($sql);
 		mysqli_query( $db, $sql );
 		$_SESSION[ "username" ] = $ca_username;

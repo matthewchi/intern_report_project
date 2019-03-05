@@ -1,7 +1,8 @@
 <?php
 
 include( "includes/server.php" );
-include( "accountName.php" );
+include( "includes/accountName.php" );
+include( "includes/userName.php" );
 
 //if user is not logged in, they cannot access this page
 if (empty($_SESSION["username"])) {
@@ -63,7 +64,7 @@ else
 				</form>
 			</div>
 		<?php endif ?>
-		
+
 		<?php include("includes/announcements.php");?>
 
         <div class="post">
