@@ -25,7 +25,7 @@ endif;
 //if student, only display their internships
 if (isset($_SESSION["student"])):
 	//get student internships
-	$sql = "SELECT * FROM internship_report ORDER BY id DESC";
+	$sql = "SELECT * FROM internship ORDER BY id DESC";
 	$result = mysqli_query($db, $sql);
 
 	if($result->num_rows == 0)

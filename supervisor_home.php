@@ -18,7 +18,7 @@ $db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "
 			$s_email = $_SESSION["username"];
 
 			//get previous address
-			$sql = "SELECT userid FROM internship_report WHERE intern1_5_supervisor_email = ('$s_email')";
+			$sql = "SELECT userid FROM internship WHERE intern1_5_supervisor_email = ('$s_email')";
 			$result = mysqli_query($db, $sql);
 
 			if($result->num_rows == 0)
