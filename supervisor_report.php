@@ -455,7 +455,7 @@ $intern_name = $_SESSION["intern_name"];
 
                     </table>
 
-                    <input type="submit" name="submit_intern" value="Submit" style="float:right;">
+                    <input type="submit" name="submit_intern" value="Submit Evaluation" style="float:right;">
                 </div>
             </form>
         </div>

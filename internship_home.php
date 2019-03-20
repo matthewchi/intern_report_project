@@ -9,7 +9,7 @@ if (empty($_SESSION["username"])) {
 
 if (isset($_SESSION["post"])):
 	//get all internships
-	$sql = "SELECT * FROM super_eval ORDER BY id DESC";
+	$sql = "SELECT * FROM internship ORDER BY id DESC";
 	$result = mysqli_query($db, $sql);
 
 	if($result->num_rows == 0)
@@ -70,25 +70,74 @@ endif;
 <div class="container">
 
   <div class="internship">
-    <h2>Your Internships</h2>
+      <?php if (isset($_SESSION["student"])): ?>
+    <h2>Your Internships (Total Intern Hours: )</h2>
 
-		<?php if (isset($_SESSION["post"])):
+      <button type="button" onclick="location.href='internship_report.php'">Report Internship</button>
+      <?php
+      endif ?>
 
-				while ($row = $result->fetch_array()) {
+      <?php if (isset($_SESSION["post"])): ?>
+      <h2>Reported Internships</h2>
+      <?php
+      endif ?>
+        <table style="width: 100%;">
+            <thead>
+            <tr>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Company Name</th>
+                <th>Supervisor Name</th>
+                <th>Supervisor Email</th>
+                <th>Supervisor Evaluation</th>
+                <th>Advisor Approval</th>
+            </tr>
+            </thead>
 
-				  echo $row['email'].'<br>';
+            <tbody>
+            <?php if (isset($_SESSION["post"])):
 
-				}
-				endif ?>
+                while ($row = $result->fetch_assoc()) {
 
-		<?php if (isset($_SESSION["student"])):
+                    ?>
+                    <tr>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern2_1_startdate']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern2_2_enddate']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern1_1_company']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern1_4_supervisor_name']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern1_5_supervisor_email']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['supervisor_eval']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['advisor_approve']; ?></td>
+                        <td style="border-top:1px solid #000000;"><a href="">View Details</a></td>
+                        <td style="border-top:1px solid #000000;"><button>Approve</button></td>
+                    </tr>
+                    <?php
 
-				while ($row = $result->fetch_array()) {
+                }
+            endif ?>
 
-				  echo $row['intern1_1_company'].'<br>';
+            <?php if (isset($_SESSION["student"])):
 
-				}
-				endif ?>
+                while ($row = $result->fetch_assoc()) {
+                    ?>
+                    <tr>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern2_1_startdate']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern2_2_enddate']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern1_1_company']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern1_4_supervisor_name']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['intern1_5_supervisor_email']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['supervisor_eval']; ?></td>
+                        <td style="border-top:1px solid #000000;"><?php echo $row['advisor_approve']; ?></td>
+                        <td style="border-top:1px solid #000000;"><a href="">Edit</a></td>
+                        <td style="border-top:1px solid #000000;"><A href="">Delete</a></td>
+                    </tr>
+                    <?php
+                }
+            endif ?>
+            </tbody>
+        </table>
+
+
 
 <!--
     <div class="internship-tile">
@@ -100,7 +149,7 @@ endif;
     </div>
 -->
 
-    <button type="button" onclick="location.href='internship_report.php'">Report Internship</button>
+
   </div>
 
 </div>

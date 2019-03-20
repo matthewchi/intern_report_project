@@ -18,7 +18,7 @@ $db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "
 			$s_email = $_SESSION["username"];
 
 			//get previous address
-			$sql = "SELECT userid FROM internship WHERE intern1_5_supervisor_email = ('$s_email')";
+			$sql = "SELECT id FROM internship WHERE intern1_5_supervisor_email = ('$s_email')";
 			$result = mysqli_query($db, $sql);
 
 			if($result->num_rows == 0)
@@ -61,16 +61,6 @@ $db = mysqli_connect( "goss.tech.purdue.edu", "cgt456group03", "Group03c7929", "
 
   <div class="internship">
     <h2>Your Interns</h2>
-  </div>
-
-	<div class="internship">
-
-      <h4><?php	if($result->num_rows !=0) { echo(trim($row["userid"]));} ?></h4>
-			<p style="display:inline;">
-        Intern evaluation complete, yes or no.
-      </p>
-      <a style="float:right; display:inline;" href="url">edit</a>
-
   </div>
 
 	<?php include("includes/interns.php");?>

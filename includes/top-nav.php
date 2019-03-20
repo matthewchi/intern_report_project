@@ -4,11 +4,11 @@
         <li class="top-nav brand">
             <a href="home.php"><i class="fab fa-pied-piper-pp"></i></a>
         </li>
-
+<!--
         <li class="top-nav search">
             <form class="top-nav"><input class="top-nav" placeholder="Search"/><i class="fas fa-search"></i></form>
         </li>
-<!--
+
         <li class="top-nav options" style="float:right">
             <div class="dropdown">
                 <button class="dropButton"><i class="fas fa-caret-down"></i></button>
