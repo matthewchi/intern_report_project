@@ -502,4 +502,23 @@ if ( isset( $_POST[ 'submit_post' ] ) ) {
 	}
 }
 
+$internship_id="";
+
+if ( isset( $_POST[ 'approve' ] ) ) {
+
+	$internship_id = addslashes( $_POST[ "internship_id" ] );
+
+	if ( empty( $internship_id ) ) {
+		array_push( $errors, "Error" );
+	}
+
+	if ( count( $errors ) == 0 ) {
+		$sql = "UPDATE internship SET advisor_approve='Approved' WHERE id='$internship_id' ";
+		echo $sql;
+		//mysqli_query( $db, $sql );
+		//$_SESSION[ "success" ] = "You approved an internship";
+		//header( "Location: internship_home.php" ); // redirect to homepage
+	}
+}
+
 ?>

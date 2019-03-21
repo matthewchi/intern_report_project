@@ -109,7 +109,12 @@ endif;
                         <td style="border-top:1px solid #000000;"><?php echo $row['supervisor_eval']; ?></td>
                         <td style="border-top:1px solid #000000;"><?php echo $row['advisor_approve']; ?></td>
                         <td style="border-top:1px solid #000000;"><a href="">View Details</a></td>
-                        <td style="border-top:1px solid #000000;"><button>Approve</button></td>
+                        <td style="border-top:1px solid #000000;">
+                            <form method="post" action="internship_home.php">
+                                <input type="hidden" name="internship_id" value="<?php $row['id'] ?>">
+                                <button type="submit" name="approve">Approve</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php
 
@@ -129,7 +134,7 @@ endif;
                         <td style="border-top:1px solid #000000;"><?php echo $row['supervisor_eval']; ?></td>
                         <td style="border-top:1px solid #000000;"><?php echo $row['advisor_approve']; ?></td>
                         <td style="border-top:1px solid #000000;"><a href="">Edit</a></td>
-                        <td style="border-top:1px solid #000000;"><A href="">Delete</a></td>
+                        <td style="border-top:1px solid #000000;"><a href="">Delete</a></td>
                     </tr>
                     <?php
                 }
