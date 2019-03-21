@@ -323,6 +323,7 @@ div.side-icon {
 
 .container {
 	max-width: 1020px;
+    width: 100%;
 	margin: auto;
 }
 
@@ -413,4 +414,24 @@ h2, h3 {
 .login-container {
 	float: right;
 	margin-top: 12px;
+}
+
+@media (max-width:1030px) {
+    div.container {
+        width: 90%;
+    }
+    div.industry-content {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    div.cas-login {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    div.main-content {
+        width: 60%;
+
+    }
 }
