@@ -424,14 +424,22 @@ h2, h3 {
         display: block;
         float: none;
         width: 100%;
+        margin-bottom: 30px;
     }
     div.cas-login {
         display: block;
         float: none;
         width: 100%;
+        margin-top: 150px;
     }
     div.main-content {
-        width: 60%;
+        width: 100%;
+    }
+    div.post {
+        width: 75%;
+    }
 
+    div.right-content {
+        display: none;
     }
 }
